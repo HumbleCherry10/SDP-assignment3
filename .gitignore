@@ -1,0 +1,19 @@
+# Java build artifacts
+out/
+bin/
+*.class
+
+# IDE and Editor files
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+
+# Temporary and build artifacts
+test_tex/
+*.log
+*.aux
+*.synctex.gz
+*.toc
+scratch/

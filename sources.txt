@@ -1,0 +1,7 @@
+src/bridge/abstraction/Shape.java
+src/bridge/abstraction/Circle.java
+src/bridge/abstraction/Square.java
+src/bridge/implementor/Renderer.java
+src/bridge/implementor/VectorRenderer.java
+src/bridge/implementor/RasterRenderer.java
+src/Main.java

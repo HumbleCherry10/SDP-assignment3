@@ -10,10 +10,11 @@ bin/
 *.swp
 *.swo
 
-# Temporary and build artifacts
+# Local build tools and generator scripts (keep repo 100% Java)
+.tools/
+scratch/
 test_tex/
 *.log
 *.aux
 *.synctex.gz
 *.toc
-scratch/

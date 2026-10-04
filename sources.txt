@@ -4,4 +4,5 @@ src/bridge/abstraction/Square.java
 src/bridge/implementor/Renderer.java
 src/bridge/implementor/VectorRenderer.java
 src/bridge/implementor/RasterRenderer.java
+src/bridge/implementor/AsciiRenderer.java
 src/Main.java

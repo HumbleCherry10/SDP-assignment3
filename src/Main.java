@@ -1,6 +1,7 @@
 import bridge.abstraction.Circle;
 import bridge.abstraction.Shape;
 import bridge.abstraction.Square;
+import bridge.implementor.AsciiRenderer;
 import bridge.implementor.RasterRenderer;
 import bridge.implementor.Renderer;
 import bridge.implementor.VectorRenderer;
@@ -26,7 +27,7 @@ public class Main {
      */
     public static void runDemo() {
         int passedCount = 0;
-        int totalChecks = 5;
+        int totalChecks = 7;
 
         // T1: A1 (Circle) with I1 (VectorRenderer)
         Shape circleVector = new Circle("C-01", 2, new VectorRenderer());
@@ -61,11 +62,25 @@ public class Main {
             passedCount++;
         }
 
+        // T6: A1 (Circle) with new I3 (AsciiRenderer)
+        Shape circleAscii = new Circle("C-01", 2, new AsciiRenderer());
+        String expectedT6 = "ASCII circle radius=2";
+        if (checkCombination("T6", "Circle + AsciiRenderer", circleAscii, expectedT6)) {
+            passedCount++;
+        }
+
+        // T7: A2 (Square) with new I3 (AsciiRenderer)
+        Shape squareAscii = new Square("S-01", 3, new AsciiRenderer());
+        String expectedT7 = "ASCII square side=3";
+        if (checkCombination("T7", "Square + AsciiRenderer", squareAscii, expectedT7)) {
+            passedCount++;
+        }
+
         System.out.println("SUMMARY: " + passedCount + "/" + totalChecks + " PASS");
     }
 
     /**
-     * Helper to verify T1-T4 combinations.
+     * Helper to verify T1-T4, T6-T7 combinations.
      */
     private static boolean checkCombination(String testId, String label, Shape shape, String expected) {
         String actual = shape.execute();
